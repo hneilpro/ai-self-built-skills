@@ -7,7 +7,9 @@ description: "Day-to-day VPN operation: connect, verify no leaks (IP/DNS/WebRTC)
 
 ## Purpose
 Operate the VPN correctly every session: connected, verified leak-free, and
-used within its limits.
+used within its limits. Defaults below assume **Proton VPN Free** (the
+standing recommendation — see `../vpn-research/references/current-picks.md`
+for the ranked list); provider-specific differences are noted inline.
 
 ## Workflow
 1. Connect — default to the app's **Quick Connect** / fastest server.

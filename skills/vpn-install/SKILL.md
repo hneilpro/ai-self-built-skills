@@ -9,7 +9,10 @@ description: "Install a chosen VPN on Linux, Windows, mobile, or as a browser ex
 Get the chosen VPN installed and its tunnel verified on the target machine or browser.
 
 ## Workflow
-1. Confirm the provider — from `vpn_research`, or one the user names (sanity-check it against `../vpn-research/references/avoid-list.md` first).
+1. Confirm the provider — the default is **Proton VPN Free** (see
+   `../vpn-research/references/current-picks.md` for the ranked list and
+   why). If the user names another provider, sanity-check it against
+   `../vpn-research/references/avoid-list.md` first.
 2. Identify the platform: Linux (which distro), Windows 11, Android, iOS, or browser-only.
 3. Install via the official path — per-platform commands in `references/install-matrix.md`. Official GUI/CLI client first: it bundles kill switch + protocol selection.
 4. Fallback if the official client fails: generate a WireGuard (or OpenVPN) config from the provider's account dashboard and import it — standalone WireGuard app on Windows, `wg-quick` or NetworkManager import on Linux.

@@ -10,10 +10,23 @@ Find a free VPN that is actually safe — no logs sold, no malware, real encrypt
 
 ## Workflow
 1. Read `references/current-picks.md` (top picks + verified date). If the snapshot is older than ~6 months, re-research before recommending — free tiers change caps, owners, and jurisdictions.
-2. Score any candidate — including VPNs the user names — against the 10-point checklist below. A VPN that fails points 1, 6, or 7 is disqualified outright.
-3. Cross-check `references/avoid-list.md`. Never recommend anything on it.
-4. Deliver the pick with: why it won, its limits (cap, locations, devices), and what the user gives up vs paid.
-5. Hand off to `vpn_install` with the chosen provider + target platform.
+2. **Default recommendation: Proton VPN Free.** It is the standing pick —
+   unlimited bandwidth, annually audited no-logs, Swiss jurisdiction, fully
+   open-source apps. Deviate only for a concrete reason: manual country
+   choice → Windscribe; zero signup → hide.me; P2P-first → PrivadoVPN;
+   audited + many countries for light use → TunnelBear.
+3. Score any candidate — including VPNs the user names — against the 10-point checklist below. A VPN that fails points 1, 6, or 7 is disqualified outright.
+4. Cross-check `references/avoid-list.md`. Never recommend anything on it.
+5. Deliver the pick with: why it won, its limits (cap, locations, devices), and what the user gives up vs paid.
+6. Hand off to `vpn_install` with the chosen provider + target platform.
+
+## Updating recommendations
+
+The ranked pick list lives **only** in `references/current-picks.md` —
+that file is the single source of truth. When caps, owners, audits, or
+jurisdictions change, edit that one file and bump its verified date;
+`vpn_install` and `vpn_use` read it from here, so nothing else needs
+touching.
 
 ## Evaluation checklist (evergreen)
 1. **Business model.** Free must be a funnel to a paid plan or be mission-funded. No paid tier / no company site / ad-funded = fail.
