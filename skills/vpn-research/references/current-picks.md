@@ -18,8 +18,9 @@ jurisdictions change. Re-run the checklist in `SKILL.md` on anything new.
    Apr 2025 for lack of logs; Dutch server seized Feb 2026, RAM-only design
    yielded nothing) but **no formal published no-logs audit** — say so
    honestly. Toronto, Canada (5 Eyes); independently owned, apps open source.
-3. **hide.me Free** — unlimited data, **no signup at all**, 7–8 locations
-   with manual choice, 1 device. No-logs verified by Securitum audit (2024).
+3. **hide.me Free** — unlimited data, 7–8 locations
+   with manual choice, 1 device. Email signup required (as of 2026-09-30;
+   the old no-signup flow is gone). No-logs verified by Securitum audit (2024).
    eVenture Ltd., Malaysia (outside all intel alliances). Slower on distant
    servers; no streaming/torrenting on free. Best zero-friction fallback.
 4. **PrivadoVPN Free** — 10 GB/30 days at full speed, then 1 Mbps "emergency

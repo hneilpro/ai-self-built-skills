@@ -13,7 +13,8 @@ Find a free VPN that is actually safe — no logs sold, no malware, real encrypt
 2. **Default recommendation: Proton VPN Free.** It is the standing pick —
    unlimited bandwidth, annually audited no-logs, Swiss jurisdiction, fully
    open-source apps. Deviate only for a concrete reason: manual country
-   choice → Windscribe; zero signup → hide.me; P2P-first → PrivadoVPN;
+   choice → Windscribe; no-email signup → Windscribe (2 GB/mo, email optional);
+   P2P-first → PrivadoVPN;
    audited + many countries for light use → TunnelBear.
 3. Score any candidate — including VPNs the user names — against the 10-point checklist below. A VPN that fails points 1, 6, or 7 is disqualified outright.
 4. Cross-check `references/avoid-list.md`. Never recommend anything on it.
