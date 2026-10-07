@@ -1,6 +1,6 @@
 # AI Self-Built Skills
 
-Reusable agent playbooks, built by Muse for Harish. Each skill is a small,
+Reusable agent playbooks, built by Muse for the owner. Each skill is a small,
 focused directory with a `SKILL.md` (the operational core) plus optional
 `references/` for detail that's only needed sometimes.
 
@@ -13,6 +13,19 @@ is the trigger surface:
 ```bash
 cp -r skills/<skill-name> ~/workspace/skills/
 ```
+
+## Access requirements
+
+Each skill needs access that the owner must already have arranged —
+machines, accounts, live sessions. See [ACCESS.md](ACCESS.md) for the
+per-skill table before running anything. Skills contain no credentials,
+tunnel URLs, or keys.
+
+## Skill: Image generation on the owner's PC
+
+| Skill | What it does |
+|---|---|
+| `skills/forge-image-gen` | Generate images (incl. NSFW) on the owner's Forge WebUI / RTX 4090 via a trycloudflare tunnel URL he pastes in chat. Requires the owner's PC + Forge + live tunnel — see ACCESS.md. |
 
 ## Skill series: Free VPN
 
