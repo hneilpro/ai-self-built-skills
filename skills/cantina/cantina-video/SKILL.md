@@ -57,7 +57,10 @@ Cantina has two video tools (help center: "Fast Videos vs Imagine Videos"):
 4. The Video Editor opens; wait for generation (several minutes).
 
 ### C. Fast flow from an image's detail page (verified end-to-end 2026-10-19)
-1. Click an image card → its detail page (/images/<id>).
+1. Click an image card → its detail page (/images/<id>). Right panel
+   "Create video" tab: Video template (Auto), "Describe the video you
+   want to make…" prompt box, "Add a character", "Camera style",
+   "Create video" button.
 2. Use the **TOP** "Describe the video you want to make…" input — on this
    page the top input is the real generator; the bottom composer is not
    (user correction, 2026-10-19). Official docs agree: "tap Create Video in
@@ -66,12 +69,16 @@ Cantina has two video tools (help center: "Fast Videos vs Imagine Videos"):
    prompt, Template on Auto, click **Create video**.
 
 ### D. Video Editor directly (verified read-only 2026-10-19)
-"+ New video" → /video-editor: Advanced settings gear, aspect 9:16
-(locked), Video/Script tabs, Saved, Share. "Add clip" (+) → picker with
-**Character** and **Image** tabs (Image tab = gallery grid + "Describe an
-image…" box). Bottom toolbar: Play, timer, Cast/Locations/Wardrobes/Objects/
-Split/Captions (marked "coming soon" 2026-10-19), Undo/Redo, **Generate**
-(enables once clips are added), Saved/Share.
+"+ New video" → /video-editor: top bar has Advanced settings gear, aspect
+9:16 (locked/disabled), Video/Script tabs, Saved, Share. Canvas: "Add your
+first clip — Use the + button to add characters or images". Track header
+and timeline each have an "Add clip" (+) button → picker with **Character**
+and **Image** tabs. Image tab: gallery grid of generated images ("Gallery
+image" + character/time), "All" filter, and a "Describe an image…"
+composer (0/2000 chars) at the bottom. Bottom toolbar: Play, timer,
+Cast/Locations/Wardrobes/Objects/Split/Captions/Music (marked "coming
+soon" 2026-10-19), Undo/Redo, **Generate** (enables once clips are
+added), Saved/Share.
 
 ### E. From a bot chat image → Animate Image (official docs, not yet
 exercised on web)
