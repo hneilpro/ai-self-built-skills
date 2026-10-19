@@ -30,8 +30,9 @@ already know your VPN pick.
 | # | Skill | What it does |
 |---|-------|--------------|
 | 1 | `skills/cantina/cantina-login` | Log into the Cantina AI web app via phone-number SMS code (the only web login method — no Google option on web). Establishes the browser session other Cantina skills build on. |
+| 2 | `skills/cantina/cantina-images` | Generate AI images: @-mention a character plus free-text prompt, with contact-grounded pose wording and full-size QC. |
 
-More Cantina skills (chats, image/video generation) get added as each flow is
+More Cantina skills (chats, video generation) get added as each flow is
 verified end-to-end.
 
 ## Conventions
