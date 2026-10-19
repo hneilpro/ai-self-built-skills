@@ -18,12 +18,21 @@ cp -r skills/<skill-name> ~/workspace/skills/
 
 | # | Skill | What it does |
 |---|-------|--------------|
-| 1 | `skills/vpn-research` | Research free VPNs and evaluate them for safety, security, and privacy — including which ones to avoid and why. |
-| 2 | `skills/vpn-install` | Install the chosen VPN on a machine (Linux / Windows) or as a browser extension, with the full-tunnel vs proxy caveat. |
-| 3 | `skills/vpn-use` | Day-to-day VPN use: connect, verify the tunnel (IP / DNS / WebRTC leaks), switch servers, disconnect, troubleshoot. |
+| 1 | `skills/vpn/vpn-research` | Research free VPNs and evaluate them for safety, security, and privacy — including which ones to avoid and why. |
+| 2 | `skills/vpn/vpn-install` | Install the chosen VPN on a machine (Linux / Windows) or as a browser extension, with the full-tunnel vs proxy caveat. |
+| 3 | `skills/vpn/vpn-use` | Day-to-day VPN use: connect, verify the tunnel (IP / DNS / WebRTC leaks), switch servers, disconnect, troubleshoot. |
 
 Run them in order: research → install → use. Each skill stands alone if you
 already know your VPN pick.
+
+## Skill series: Cantina
+
+| # | Skill | What it does |
+|---|-------|--------------|
+| 1 | `skills/cantina/cantina-login` | Log into the Cantina AI web app via phone-number SMS code (the only web login method — no Google option on web). Establishes the browser session other Cantina skills build on. |
+
+More Cantina skills (chats, image/video generation) get added as each flow is
+verified end-to-end.
 
 ## Conventions
 
