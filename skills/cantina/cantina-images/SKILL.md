@@ -33,8 +33,10 @@ anyone sees it. Verified 2026-10-19.
    character explicitly; never rely on a bare name in text.
 2. Ground physical contact in every pose prompt (see
    `references/prompt-lessons.md`) — Cantina floats poses otherwise.
-3. Outfit is prompt-driven: the Wardrobe tab rendered empty, so describe
-   clothing in the prompt text.
+3. Outfit is prompt-driven: the Wardrobe tab is a library filter with no
+   create/add route for regular users — real wardrobe entries are
+   creator-made character media only (see `references/prompt-lessons.md`).
+   Describe clothing in the prompt text.
 4. Before uploading the user's face/photos or building avatars from them,
    re-surface the Terms §7.4 catch (perpetual, irrevocable training license;
    no opt-out; deletion doesn't revoke) and get explicit per-case approval.

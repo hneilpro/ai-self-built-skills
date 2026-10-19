@@ -36,3 +36,7 @@ skills (chats, image/video generation) can act as the user. Verified 2026-10-19.
    Terms §7.4 catch (perpetual, irrevocable license for Cantina to train AI
    models on uploads; no opt-out; account deletion does not revoke it) and
    get explicit per-case approval.
+5. Session persistence: the 2026-10-19 login session stayed live across
+   browser tasks hours apart (no re-login needed) — but always verify the
+   session is active before running another skill; if logged out, repeat
+   the flow.
