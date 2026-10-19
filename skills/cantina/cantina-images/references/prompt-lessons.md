@@ -48,14 +48,23 @@ generation:
 All SFW, fully-clothed exercise prompts (5 generations: wall push-up,
 sit-to-stands, glute bridge, marching in place, calf raises) completed with
 no moderation blocks. Modest wording plus "fully clothed, SFW" in the
-prompt appears safe; racier prompts untested.
+prompt appears safe.
+Racier wording tested on IMAGES 2026-10-19: a sheer two-piece lingerie /
+extra-low-waist prompt and a "purple lace top and black lace underwear"
+prompt both generated with no block. The same wording in VIDEO prompts is
+blocked on every input — see cantina-video SKILL.md. Official policy:
+suggestive allowed, explicit pornographic video not, and moderation "errs
+toward caution"; never reword a blocked prompt to sneak past the filter
+(repeated evasion risks account restrictions).
 
-## Paths not yet verified
-- Composer toolbar: Theme styles, Camera styles, Upload images.
+## Paths not yet verified (as of 2026-10-19)
+- Composer toolbar: Theme styles, Camera styles, Upload images (theme button
+  observed on the video composer; not exercised).
 - Element tabs: Locations, Objects, Extras, Filter control.
-- Bottom-center in-chat composer ("Imagine a video. Type @ to add
-  characters.") with Video/Image tabs and "Choose character" — not exercised
-  end-to-end.
 - Inside a bot DM there is NO dedicated image button (only Mention, emoji,
   + Attachments, microphone) — image generation lives on the Create Image
   page, not in the DM.
+- Verified since original writing: bottom-center composer ("Imagine a
+  video. Type @ to add characters.") with Video/Image tabs — exercised
+  end-to-end; "Add to video project" on gallery cards — verified; image
+  detail page Create-video panel top input — verified end-to-end.

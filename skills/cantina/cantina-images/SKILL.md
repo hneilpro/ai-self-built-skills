@@ -10,18 +10,42 @@ Generate still images in Cantina's web app: pick a character via @-mention,
 describe pose/outfit/scene in free text, generate, and QC the result before
 anyone sees it. Verified 2026-10-19.
 
+## Parameters
+The character handle is a per-session parameter, never hardcoded here:
+`@<handle>` (e.g. `@tori-v` for Tori). These procedures work with any
+character avatar — or with no avatar at all — supplied by whoever runs the
+skill. Always use the handle given for the session; never assume one.
+
 ## Workflow
 1. Requires an authenticated session — run `cantina_login` first if needed.
 2. Open `https://cantina.com/create-image` (left nav **Images**).
 3. In the prompt box, type `@<handle>` and pick the character from the
-   typeahead (e.g. `@sosadsosexy` → Cassy, verified bot "Active now").
-   Then type the prompt and click **Generate**.
-4. Wait out the "Generating…" spinner. The render lands at the front of the
+   typeahead so the chip attaches inline (e.g. `@tori-v` for Tori; the
+   user's own bot — always verify the chip is present, never a bare name
+   typed as text).
+4. Then type the prompt and click **Generate**. Prompt recipe (official):
+   **Subject → Setting → Action → Atmosphere** — the model reads words
+   literally, so the more the prompt sounds like the picture you're
+   picturing (pose, wardrobe, lighting, camera, color, finish), the closer
+   the result. Ground physical contact in every pose prompt (see
+   `references/prompt-lessons.md`) — Cantina floats poses otherwise.
+5. Wait out the "Generating…" spinner. The render lands at the front of the
    Images gallery with Edit image / Add to video project / More actions.
-5. QC every render at full size before presenting: correct pose/form, no
+6. QC every render at full size before presenting: correct pose/form, no
    limb defects, outfit as specified. **Delete failed or culled images from
    the gallery** — don't leave them sitting there. Ambiguous = keep + flag
    to the user.
+
+## Other generation routes (official docs; web status varies)
+- **Imagine tab** (Create Video page, bottom composer): the Image tab
+  generates images as well as video — exercised end-to-end 2026-10-19 via
+  the "Add to video project" flow.
+- **Bot chat**: send a scene prompt (e.g. "selfie preparing to do
+  gymnastics") → the bot replies with an image → tap it for the detail
+  view. Not yet exercised on web.
+- **Selfie Booth themes** (official docs, mobile): paint-tool presets —
+  Featured, Modern, Moody, Cursed, Fantasy, Retro, Whimsy, Action, Travel,
+  Zodiac. Not yet verified on web.
 
 ## Output Contract
 - The generated image(s), with a keep/cull verdict + reason per image.
@@ -30,16 +54,28 @@ anyone sees it. Verified 2026-10-19.
 
 ## Operating Rules
 1. Character identity comes from the @-mention chip — always mention the
-   character explicitly; never rely on a bare name in text.
+   character explicitly; never rely on a bare name in text. Chip must sit
+   inline in the prompt box via the @ typeahead.
 2. Ground physical contact in every pose prompt (see
    `references/prompt-lessons.md`) — Cantina floats poses otherwise.
 3. Outfit is prompt-driven: the Wardrobe tab is a library filter with no
    create/add route for regular users — real wardrobe entries are
    creator-made character media only (see `references/prompt-lessons.md`).
-   Describe clothing in the prompt text.
-4. Before uploading the user's face/photos or building avatars from them,
+   Describe clothing in the prompt text. Note: what image prompts accept,
+   video prompts may block — see cantina_video's moderation section.
+4. Moderation (official Generative AI Image Policy): suggestive/romantic
+   content is allowed; explicit pornographic output, sexual content of real
+   identifiable people without consent, minors, hate, and IP violations are
+   not. Blocks happen at two layers — the foundation model's own filters
+   (generic errors) and Cantina's Community Guidelines review. Do not
+   reword blocked prompts to sneak past the filter; repeated evasion
+   attempts can bring account restrictions. A wrongly-blocked result has a
+   "Report an issue" path for human review.
+5. Before uploading the user's face/photos or building avatars from them,
    re-surface the Terms §7.4 catch (perpetual, irrevocable training license;
    no opt-out; deletion doesn't revoke) and get explicit per-case approval.
-   Verified flows so far used only built-in bot characters, no user face.
-5. The web app is beta and the UI drifts — findings here carry their
+   Verified flows so far used only bot characters, no user face.
+6. The web app is beta and the UI drifts — findings here carry their
    "verified as of" date; re-verify paths before trusting them blindly.
+   Official reference: https://support.cantina.com (Prompting 101,
+   Generative AI Image Policy).
