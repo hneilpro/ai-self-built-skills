@@ -19,7 +19,7 @@ Tori @tori_v, image-to-video, first generation passed).
    button. The image attaches as an "Image" chip in the bottom video
    composer ("Imagine a video. Type @ to add characters.").
 3. In the same composer, @-mention the character (type `@<handle>`, pick
-   from the typeahead so the chip attaches — e.g. `@tori_v` → Tori).
+   from the typeahead so the chip attaches — e.g. `@tori-v` → Tori).
 4. Type the video prompt (action + what she should talk about), leave the
    Template dropdown on default, press Send.
 5. The Video Editor opens with one clip; wait for generation to finish
