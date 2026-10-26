@@ -169,7 +169,7 @@ Short version:
   Do not continue a credential flow while the user is overwhelmed.
 
 ## Single-credential variant — pointer only
-Route C is documented only in the Cloudflare skill appendix, not
+The single-credential variant is documented only in the Cloudflare skill appendix, not
 in this parent skill. See the optional variant appendix in
 `../museai-vault-cloudflare/SKILL.md`. That appendix covers a
 separate Access application for one sign path only, for any AI

@@ -40,7 +40,7 @@ it. Do not let a wrong-type value be submitted and then debugged later.
 - Source: Cloudflare dashboard only, Service Tokens, at creation,
   first field in the one-time Service token details dialog.
 - Use: sent as the `CF-Access-Client-Id` header, together with the
-  Secret, on the normal sign path. Not used on a Route C sign path.
+  Secret, on the normal sign path. Not used on a single-credential variant sign path.
 - Shape, observed the original build: a long hex ID, plus a ".access" suffix.
   The suffix is part of the ID. Enter it exactly, including
   ".access".
@@ -60,7 +60,7 @@ it. Do not let a wrong-type value be submitted and then debugged later.
   recreate the token; do not guess it, and do not try to recover it
   from the list.
 - Use: sent as the `CF-Access-Client-Secret` header, together with
-  the Client ID, on the normal sign path. Not used on a Route C
+  the Client ID, on the normal sign path. Not used on a single-credential variant
   sign path.
 - Shape: a long random string, longer than the Client ID, no "s."
   start, no ".access" suffix.

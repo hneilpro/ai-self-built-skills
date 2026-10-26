@@ -25,10 +25,10 @@ against, in the original rebuild.
   and Vault was not the failure.
 - Fix, normal path: present both Access headers plus the Vault
   token, together, and verify the token name is in the root
-  application's policy. Fix, Route C path: use the Route C Bypass
+  application's policy. Fix, single-credential variant path: use the single-credential variant Bypass
   application for that AI's sign path only, and sign with the Vault
   token only, no Access headers. Do not keep retrying a token that
-  is not in a policy; add it, recreate it, or switch to Route C.
+  is not in a policy; add it, recreate it, or switch to single-credential variant.
 - Check: a headerless request to the root path should also redirect
   to Access. If it does not, the root application itself may have
   changed, and that is a separate incident.
@@ -91,7 +91,7 @@ against, in the original rebuild.
 - Cause: the AI's secure entry system allows only one stored
   credential per request, and the sign needs three headers together
   on the normal path. This is a tool limit, not a wrong value.
-- Fix: Route C, for that AI's sign path only, then sign with the
+- Fix: single-credential variant, for that AI's sign path only, then sign with the
   Vault token only. Do not ask the user to re-enter the same values
   in a different form; that will not fix a tool limit. Do not
   propose single-header service-token mode as a fix; it still
@@ -130,7 +130,7 @@ against, in the original rebuild.
   until a live sign proves otherwise. Recreate the token cleanly
   with a clear name, copy the new pair at creation, add that exact
   token to the policy, and verify the policy list after saving.
-  Or switch to Route C, which does not need that token's policy.
+  Or switch to single-credential variant, which does not need that token's policy.
   Record the disappearance as an open item; do not present it as
   explained.
 

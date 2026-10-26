@@ -59,7 +59,7 @@ not the supported path. Port 443 via Cloudflare is.
   policy for it was never saved, treat any pair copied from that
   creation as not corresponding to a working token, until a live
   sign proves otherwise. Do not keep retrying a disappeared token.
-  Recreate it cleanly, or switch to Route C, and record the
+  Recreate it cleanly, or switch to single-credential variant, and record the
   disappearance as an open item. This happened once in the
   original rebuild; its cause is unverified, see the parent
   skill's research notes.
@@ -67,10 +67,10 @@ not the supported path. Port 443 via Cloudflare is.
   an existing policy, to make room for a new token. Add-only.
   A new token that requires deleting an old policy is the wrong plan.
 
-## Appendix — Route C, narrow Bypass, for a single-credential secret store only (optional variant)
+## Appendix — Single-credential variant, narrow Bypass (optional variant)
 This appendix is not part of the main flow. Use it only for an
 AI whose secret store allows only one credential per request.
-Route C is verified live on the original build. It is not a general
+The single-credential variant is verified live on the original build. It is not a general
 loosening of the gate.
 - Create a separate Access application for that AI's sign path
   only, for example
@@ -84,11 +84,11 @@ loosening of the gate.
 - That AI then signs with its Vault token only, one credential,
   no Access headers. This fits a secret store that allows only one
   stored credential per request.
-- Route C does NOT make the sign path open. Vault still requires
+- The single-credential variant does NOT make the sign path open. Vault still requires
   a valid token for that role. A request without a valid token
   returns Vault `403 permission denied`, not a certificate. Verify
   that live, with no headers and no token, before telling the AI
-  to rely on Route C. Also verify that the root path and the other
+  to rely on the single-credential variant. Also verify that the root path and the other
   sign paths still redirect to Access login without headers.
 - Do NOT create a Bypass for the whole `<vault-hostname>`
   application, and do NOT create a Bypass for any other path, to
@@ -129,4 +129,4 @@ loosening of the gate.
 ## Detail
 See `references/cloudflare-setup.md` for the tunnel checklist, the
 Access application checklist, the service-token checklist, and
-the Route C appendix checklist with its live-verification steps.
+the single-credential variant appendix checklist with its live-verification steps.

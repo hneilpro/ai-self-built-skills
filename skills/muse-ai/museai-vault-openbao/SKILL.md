@@ -72,13 +72,13 @@ Role format: `<ai-name>-ssh`, for example `<ai-1-role>`,
 ## Sign request — the exact contract
 - Endpoint: `POST https://<vault-hostname>/v1/ssh-client-signer/sign/<role>`
   where `<role>` is that AI's own role only.
-- Normal path (all AIs except a Route C AI): headers
+- Normal path (all AIs except an AI using the single-credential variant): headers
   `CF-Access-Client-Id`, `CF-Access-Client-Secret`, and
   `X-Vault-Token`, body `{"public_key": "<that AI's own public key>"}`.
   A 200 response carries `signed_key`. Save it as the certificate
   next to that AI's private key. Check it with `ssh-keygen -L`:
   principal `<ssh-user>`, `permit-pty` only, about 30 minutes valid.
-- Route C path (appendix-only, see the Cloudflare skill appendix):
+- single-credential variant path (appendix-only, see the Cloudflare skill appendix):
   same endpoint and body, header `X-Vault-Token` only, no Access
   headers. The Access Bypass for that AI's sign path only is what
   makes this work. See `../museai-vault-cloudflare/SKILL.md`.

@@ -79,13 +79,13 @@ If any step fails, stop and report exactly which step failed,
 without any values. Do not fake a success, and do not claim a step
 you have not actually done."
 
-## Appendix Message A — Route C sign guidance (optional, single-credential variant only)
-Use this message ONLY after the Route C appendix checklist in
+## Appendix Message A — Single-credential sign guidance (optional variant only)
+Use this message ONLY after the single-credential variant appendix checklist in
 `../../museai-vault-cloudflare/SKILL.md` and its setup reference
 passes, for an AI whose secret store allows only one credential
 per request. It is not part of the normal flow, and it is not for
 an AI that can present three headers together.
-"Route C is now live for your sign path only. Please rerun your
+"The single-credential variant is now live for your sign path only. Please rerun your
 test now, with a change to the sign step only. Sign for <role>
 only, POST to https://<vault-hostname>/v1/ssh-client-signer/sign/<role>,
 with your public key, and with only one header from your secure

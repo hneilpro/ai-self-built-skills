@@ -6,6 +6,8 @@ present an open item as solved, and do not delete an open item
 because a later step worked around it. A workaround is not a root
 cause fix.
 
+Terminology note (2026-10-25): "Route C" in this dated record means the single-credential variant in current guidance. New guidance does not use the Route C label.
+
 ## Verified live, the original build — ground truth for this skill
 - Full rebuild: Oracle Always Free VM, OpenBao 2.7.1,
   ssh-client-signer, RSA 4096 CA, one role per AI, one sign-only periodic

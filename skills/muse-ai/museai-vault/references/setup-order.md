@@ -96,7 +96,7 @@ See `verification-checklist.md`.
 Not a main step. If an AI reports it cannot present three headers
 together because its secret store allows only one credential per
 request, see the optional variant appendix in
-`../../museai-vault-cloudflare/SKILL.md` and its Route C checklist in
+`../../museai-vault-cloudflare/SKILL.md` and its single-credential variant checklist in
 `../../museai-vault-cloudflare/references/cloudflare-setup.md`.
 Do not use that variant for an AI that can present three headers;
 that AI uses the normal path.

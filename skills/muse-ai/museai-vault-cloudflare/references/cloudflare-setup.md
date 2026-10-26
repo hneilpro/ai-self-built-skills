@@ -1,4 +1,4 @@
-# Cloudflare setup — tunnel, Access, service tokens, Route C appendix
+# Cloudflare setup — tunnel, Access, service tokens, single-credential variant appendix
 
 Verified live during the original build. Dashboard layout changes; the names below are
 the names seen in the the original build dashboard. If a name has moved,
@@ -64,14 +64,14 @@ Tokens), not by guessing a URL.
 - [ ] If a created token disappears from the list, or its policy
   was never saved, treat any pair copied from that creation as not
   working, until a live sign proves otherwise. Recreate cleanly, or
-  switch to Route C, and record the disappearance as an open item.
+  switch to single-credential variant, and record the disappearance as an open item.
 
-## Appendix — Route C checklist, for one AI's sign path only (optional variant)
+## Appendix — single-credential variant checklist, for one AI's sign path only (optional variant)
 - [ ] Trigger confirmed: that AI cannot present three headers
   together because its secure entry system allows only one
   credential per request, and its sign failed with
   `credential_ambiguity` or a similar single-credential error.
-  Do not use Route C for an AI that can present three headers;
+  Do not use single-credential variant for an AI that can present three headers;
   that AI uses the normal path.
 - [ ] Create a separate Access application, self-hosted, for that
   AI's sign path only, for example
@@ -84,11 +84,11 @@ Tokens), not by guessing a URL.
   domain and path and that Bypass policy.
 - [ ] Verify the existing root application is unchanged: same
   policies, same token state, not edited, not deleted, not saved.
-  If the root application was edited to create Route C, stop and
-  undo that edit; Route C must be a separate application, not a
+  If the root application was edited to create single-credential variant, stop and
+  undo that edit; single-credential variant must be a separate application, not a
   change to the root.
 - [ ] Live-verify, with no headers and no token, before telling
-  the AI to rely on Route C:
+  the AI to rely on single-credential variant:
   - That AI's sign path returns Vault `403 permission denied`,
     not an Access redirect. That proves the gate is bypassed for
     that path, and Vault still requires a valid token.
